@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="dto : ${list}">
+        [[${dto.sno}]]
+        <br>
+        [[${dto.first}]]
+        <br>
+        [[${dto.last}]]
+        <br>
+        [[${dto.regTime}]]
+        <br>
+    </li>
+</ul>
+
+<!--조건이 true이면-->
+<!--<ul>-->
+<!--<li th:each="dto , state : ${list}" th:if="${dto.sno % 5 == 0}">-->
+<!--    [[${dto.sno}]]-->
+<!--    <br>-->
+<!--    [[${dto.first}]]-->
+<!--    <br>-->
+<!--    [[${dto.last}]]-->
+<!--    <br>-->
+<!--    [[${dto.regTime}]]-->
+<!--    <br>-->
+<!--</li>-->
+<!--</ul>-->
+
+
+<!--조건이 false이면-->
+<!--<ul>-->
+<!--    <li th:each="dto : ${list}">-->
+<!--        <span th:if="${dto.sno % 5 == 0}" th:text = "${'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;'+ dto.sno}"></span>-->
+<!--        <span th:unless="${dto.sno % 5 == 0}" th:text = "${dto.first}"></span>-->
+<!--    </li>-->
+<!--</ul>-->
+
+
+<!--<ul>-->
+<!--    <li th:each="dto , status : ${list}" th:text ="${dto.sno % 5 == 0 } ? ${dto.sno}"></li>-->
+<!--</ul>-->
+
+</body>
+</html>

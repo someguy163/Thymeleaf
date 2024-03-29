@@ -75,5 +75,19 @@
     </li>
 </ul>
 
+
+th block
+<ul>
+    <th:block th:each="dto : ${list}">
+        <li th:text="${dto.sno % 5 == 0} ? ${dto.sno} : ${dto.first}"></li>
+    </th:block>
+    <th:block th:each="dto : ${list}">
+        <li th:text="${dto.sno % 5 == 0}?${dto.regTime} : ${dto.sno}"></li>
+    </th:block>
+
+
+</ul>
+
+
 </body>
 </html>
